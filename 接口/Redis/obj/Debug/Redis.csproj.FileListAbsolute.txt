@@ -1,0 +1,8 @@
+F:\网站\Web\APP\kangcy_app\接口\Redis\bin\Debug\Redis.dll
+F:\网站\Web\APP\kangcy_app\接口\Redis\bin\Debug\Redis.pdb
+F:\网站\Web\APP\kangcy_app\接口\Redis\bin\Debug\Newtonsoft.Json.dll
+F:\网站\Web\APP\kangcy_app\接口\Redis\bin\Debug\StackExchange.Redis.dll
+F:\网站\Web\APP\kangcy_app\接口\Redis\bin\Debug\Newtonsoft.Json.xml
+F:\网站\Web\APP\kangcy_app\接口\Redis\bin\Debug\StackExchange.Redis.xml
+F:\网站\Web\APP\kangcy_app\接口\Redis\obj\Debug\Redis.dll
+F:\网站\Web\APP\kangcy_app\接口\Redis\obj\Debug\Redis.pdb

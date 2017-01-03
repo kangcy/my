@@ -1,0 +1,58 @@
+[异常时间]：2016-08-30 16:11:31,806 [ThreadID:8] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+错误页面：http://localhost/app/Fan/All?FromUserID=1
+错误信息：未将对象引用设置到对象的实例。
+追踪信息：(Trace)
+   在 SubSonic.Query.SqlQuery.Where[T](Expression`1 expression)
+   在 EGT_OTA.Controllers.FanController.All() 位置 f:\网站\Web\APP\kangcy_app\EGT_OTA\Controllers\App\FanController.cs:行号 170
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   在 System.Web.Mvc.Controller.ExecuteCore()
+   在 System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   在 System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   在 System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[用户信息]：
+UserAgent：Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1
+ClientIP：::1
+RawUrl：/app/Fan/All?FromUserID=1
+UrlReferrer：http://127.0.0.1:8020/MyApp/page/commentSub.html
+LoginName：
+---------------------------
+[异常时间]：2016-08-30 16:11:56,672 [ThreadID:51] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+错误页面：http://localhost/app/Fan/All?FromUserID=1
+错误信息：未将对象引用设置到对象的实例。
+追踪信息：(Trace)
+   在 SubSonic.Query.SqlQuery.Where[T](Expression`1 expression)
+   在 EGT_OTA.Controllers.FanController.All() 位置 f:\网站\Web\APP\kangcy_app\EGT_OTA\Controllers\App\FanController.cs:行号 170
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   在 System.Web.Mvc.Controller.ExecuteCore()
+   在 System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   在 System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   在 System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[用户信息]：
+UserAgent：Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+ClientIP：::1
+RawUrl：/app/Fan/All?FromUserID=1
+UrlReferrer：
+LoginName：
+---------------------------

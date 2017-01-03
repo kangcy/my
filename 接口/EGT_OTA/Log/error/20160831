@@ -1,0 +1,36 @@
+[异常时间]：2016-08-31 14:11:05,172 [ThreadID:34] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+错误页面：http://localhost/app/Comment/All?jsoncallback=jQuery110203239073418481546_1472623864169&page=1&rows=1&ToUserID=1&_=1472623864170
+错误信息：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3
+追踪信息：(Trace)
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 SubSonic.DataProviders.DbDataProvider.ExecuteReader(QueryCommand qry)
+   在 SubSonic.DataProviders.DbDataProvider.ToList[T](QueryCommand qry)
+   在 SubSonic.Query.SqlQuery.ExecuteTypedList[T]()
+   在 EGT_OTA.Controllers.App.CommentController.All() 位置 f:\网站\Web\APP\kangcy_app\EGT_OTA\Controllers\App\CommentController.cs:行号 168
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   在 System.Web.Mvc.Controller.ExecuteCore()
+   在 System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   在 System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   在 System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[用户信息]：
+UserAgent：Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1
+ClientIP：::1
+RawUrl：/app/Comment/All?jsoncallback=jQuery110203239073418481546_1472623864169&page=1&rows=1&ToUserID=1&_=1472623864170
+UrlReferrer：http://127.0.0.1:8020/MyApp/page/commentSub.html
+LoginName：
+---------------------------

@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DBAAF756-A902-4849-9860-5451F03E865D}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EGT_OTA</RootNamespace>
+    <AssemblyName>EGT_OTA</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary, Version=4.0.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\HtmlSanitizationLibrary.1.0.0\lib\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=5.1.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.1.608.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\StackExchange.Redis.1.1.608\lib\net45\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic.Core, Version=3.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\SubSonic.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.3.0.20105.1\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.1.0.20105.408\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Tools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Tools.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConstKeys\ConstKeys.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MusicController.cs" />
+    <Compile Include="Controllers\ArticleTypeController.cs" />
+    <Compile Include="Controllers\RedisController.cs" />
+    <Compile Include="Controllers\SmsController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
+    <Compile Include="Controllers\FanController.cs" />
+    <Compile Include="Controllers\KeepController.cs" />
+    <Compile Include="Controllers\FeedBackController.cs" />
+    <Compile Include="Controllers\PayController.cs" />
+    <Compile Include="Controllers\ZanController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
+    <Compile Include="Controllers\HelpController.cs" />
+    <Compile Include="Controllers\ArticlePartController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="Controllers\UserLoginController.cs" />
+    <Compile Include="Controllers\SystemController.cs" />
+    <Compile Include="Controllers\ShareLogController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Enum\EnumAttribute.cs" />
+    <Compile Include="Enum\EnumBase.cs" />
+    <Compile Include="Enum\Enum_Price.cs" />
+    <Compile Include="Enum\Enum_Sex.cs" />
+    <Compile Include="Enum\Enum_Status.cs" />
+    <Compile Include="Enum\Enum_Used.cs" />
+    <Compile Include="Enum\Enum_ArticlePower.cs" />
+    <Compile Include="Enum\Enum_UserLogin.cs" />
+    <Compile Include="Enum\Enum_ArticleTag.cs" />
+    <Compile Include="Enum\Enum_Zan.cs" />
+    <Compile Include="Enum\Enum_ArticlePart.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\AntiXssChineseString.cs" />
+    <Compile Include="Helper\AppLog.cs" />
+    <Compile Include="Helper\BaseHelper.cs" />
+    <Compile Include="Helper\CacheHelper.cs" />
+    <Compile Include="Helper\ChineseLunisolar.cs" />
+    <Compile Include="Helper\CommDataHelper.cs" />
+    <Compile Include="Helper\Config\CommonConfig.cs" />
+    <Compile Include="Helper\Config\RewriteConfig.cs" />
+    <Compile Include="Helper\Config\UploadConfig.cs" />
+    <Compile Include="Helper\CookieHelper.cs" />
+    <Compile Include="Helper\DesEncryptHelper.cs" />
+    <Compile Include="Helper\ExcelHelper.cs" />
+    <Compile Include="Helper\FtpHelper.cs" />
+    <Compile Include="Helper\HttpHelper.cs" />
+    <Compile Include="Helper\LogHelper.cs" />
+    <Compile Include="Helper\MailHelper.cs" />
+    <Compile Include="Helper\MySQLHelper.cs" />
+    <Compile Include="Helper\PinYinHelper.cs" />
+    <Compile Include="Helper\ReflectHelper.cs" />
+    <Compile Include="Helper\RegExpHelper.cs" />
+    <Compile Include="Helper\SessionHelper.cs" />
+    <Compile Include="Helper\SQLiteHelper.cs" />
+    <Compile Include="Helper\TicketTool.cs" />
+    <Compile Include="Helper\UnixTimeHelper.cs" />
+    <Compile Include="Helper\ValidateCodeHelper.cs" />
+    <Compile Include="Helper\XmlHelper.cs" />
+    <Compile Include="Models\App\Article.cs" />
+    <Compile Include="Models\App\SendSMS.cs" />
+    <Compile Include="Models\App\User.cs" />
+    <Compile Include="Models\App\ArticleType.cs" />
+    <Compile Include="Models\App\Comment.cs" />
+    <Compile Include="Models\App\Keep.cs" />
+    <Compile Include="Models\App\Fan.cs" />
+    <Compile Include="Models\App\Music.cs" />
+    <Compile Include="Models\App\Video.cs" />
+    <Compile Include="Models\App\Pay.cs" />
+    <Compile Include="Models\App\FeedBack.cs" />
+    <Compile Include="Models\App\Zan.cs" />
+    <Compile Include="Models\App\Help.cs" />
+    <Compile Include="Models\App\ArticlePart.cs" />
+    <Compile Include="Models\App\UserLogin.cs" />
+    <Compile Include="Models\App\ShareLog.cs" />
+    <Compile Include="Models\App\ApplyMoney.cs" />
+    <Compile Include="Models\App\Template.cs" />
+    <Compile Include="Models\App\Report.cs" />
+    <Compile Include="Models\App\ArticleRecommend.cs" />
+    <Compile Include="Models\App\DirtyWord.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Base\Repository.cs" />
+    <Compile Include="Models\Base\WebApplication.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Redis\RedisHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="DLL\Castle.Core.dll" />
+    <Content Include="DLL\HtmlSanitizationLibrary.dll" />
+    <Content Include="DLL\HtmlSanitizationLibrary.xml" />
+    <Content Include="DLL\log4net.dll" />
+    <Content Include="DLL\MySql.Data.dll" />
+    <Content Include="DLL\NPOI.dll" />
+    <Content Include="DLL\NPOI.OOXML.dll" />
+    <Content Include="DLL\NPOI.OpenXml4Net.dll" />
+    <Content Include="DLL\NPOI.OpenXmlFormats.dll" />
+    <Content Include="DLL\SubSonic.Core.dll" />
+    <Content Include="DLL\Tools.dll" />
+    <Content Include="Global.asax" />
+    <Content Include="Config\log4net.config" />
+    <Content Include="Images\default.png" />
+    <Content Include="obj\Debug\EGT_OTA.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\EGT_OTA.dll" />
+    <Content Include="obj\Debug\EGT_OTA.pdb" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net40\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net40\zh-Hans\EntityFramework.resources.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net40\zh-Hans\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net45\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net45\zh-Hans\EntityFramework.resources.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net45\zh-Hans\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\about_EntityFramework.help.txt" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\migrate.exe" />
+    <Content Include="packages\EntityFramework.zh-Hans.5.0.0\lib\net40\zh-Hans\EntityFramework.resources.dll" />
+    <Content Include="packages\EntityFramework.zh-Hans.5.0.0\lib\net40\zh-Hans\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.zh-Hans.5.0.0\lib\net45\zh-Hans\EntityFramework.resources.dll" />
+    <Content Include="packages\EntityFramework.zh-Hans.5.0.0\lib\net45\zh-Hans\EntityFramework.xml" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\EGT_OTA.csprojResolveAssemblyReference.cache" />
+    <None Include="Config\articletype.config" />
+    <Content Include="Config\music.config" />
+    <Content Include="Config\template.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\dirtyword.config" />
+    <Content Include="Config\common.config" />
+    <None Include="Config\redis.json" />
+    <Content Include="Config\upload.config" />
+    <None Include="packages\jQuery.1.7.1.1\Content\Scripts\jquery-1.7.1-vsdoc.js" />
+    <Content Include="packages\jQuery.1.7.1.1\Content\Scripts\jquery-1.7.1.js" />
+    <Content Include="packages\jQuery.1.7.1.1\Content\Scripts\jquery-1.7.1.min.js" />
+    <None Include="packages\jQuery.1.7.1.1\Tools\jquery-1.7.1.intellisense.js" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery-ui.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Scripts\jquery-ui-1.8.20.min.js" />
+    <None Include="packages\jQuery.Validation.1.9.0.1\Content\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="packages\jQuery.Validation.1.9.0.1\Content\Scripts\jquery.validate.js" />
+    <Content Include="packages\jQuery.Validation.1.9.0.1\Content\Scripts\jquery.validate.min.js" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.3.0.20105.1\lib\net40\System.Web.Mvc.dll" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.zh-Hans.3.0.20105.1\lib\net40\zh-Hans\System.Web.Mvc.resources.dll" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.zh-Hans.3.0.20105.1\lib\net40\zh-Hans\System.Web.Mvc.xml" />
+    <Content Include="packages\Microsoft.AspNet.Razor.1.0.20105.408\lib\net40\System.Web.Razor.dll" />
+    <Content Include="packages\Microsoft.AspNet.Razor.zh-Hans.1.0.20105.408\lib\net40\zh-Hans\System.Web.Razor.resources.dll" />
+    <Content Include="packages\Microsoft.AspNet.Razor.zh-Hans.1.0.20105.408\lib\net40\zh-Hans\system.web.razor.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.Helpers.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Deployment.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.zh-Hans.1.0.20105.408\lib\net40\System.Web.Helpers.resources.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.zh-Hans.1.0.20105.408\lib\net40\system.web.helpers.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.zh-Hans.1.0.20105.408\lib\net40\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.zh-Hans.1.0.20105.408\lib\net40\system.web.webpages.deployment.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.zh-Hans.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.zh-Hans.1.0.20105.408\lib\net40\system.web.webpages.razor.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.zh-Hans.1.0.20105.408\lib\net40\System.Web.WebPages.resources.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.zh-Hans.1.0.20105.408\lib\net40\system.web.webpages.xml" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="packages\Modernizr.2.5.3\Content\Scripts\modernizr-2.5.3.js" />
+    <Content Include="packages\EntityFramework.5.0.0\Content\App.config.transform" />
+    <Content Include="packages\EntityFramework.5.0.0\Content\Web.config.transform" />
+    <Content Include="packages\EntityFramework.5.0.0\EntityFramework.5.0.0.nupkg" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.PS3.psd1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.psd1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.psm1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\init.ps1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\install.ps1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\Redirect.config" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\Redirect.VS11.config" />
+    <Content Include="packages\EntityFramework.zh-Hans.5.0.0\EntityFramework.zh-Hans.5.0.0.nupkg" />
+    <Content Include="packages\jQuery.1.7.1.1\jQuery.1.7.1.1.nupkg" />
+    <Content Include="packages\jQuery.1.7.1.1\Tools\common.ps1" />
+    <Content Include="packages\jQuery.1.7.1.1\Tools\install.ps1" />
+    <Content Include="packages\jQuery.1.7.1.1\Tools\uninstall.ps1" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\jQuery.UI.Combined.1.8.20.1.nupkg" />
+    <Content Include="packages\jQuery.Validation.1.9.0.1\jQuery.Validation.1.9.0.1.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.3.0.20105.1\Microsoft.AspNet.Mvc.3.0.20105.1.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.zh-Hans.3.0.20105.1\Microsoft.AspNet.Mvc.zh-Hans.3.0.20105.1.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Razor.1.0.20105.408\Microsoft.AspNet.Razor.1.0.20105.408.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Razor.zh-Hans.1.0.20105.408\Microsoft.AspNet.Razor.zh-Hans.1.0.20105.408.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.1.0.20105.408\Microsoft.AspNet.WebPages.1.0.20105.408.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.zh-Hans.1.0.20105.408\Microsoft.AspNet.WebPages.zh-Hans.1.0.20105.408.nupkg" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\Microsoft.Web.Infrastructure.1.0.0.0.nupkg" />
+    <Content Include="packages\Modernizr.2.5.3\Modernizr.2.5.3.nupkg" />
+    <Content Include="packages\repositories.config" />
+    <None Include="Properties\PublishProfiles\egt.pubxml" />
+    <Content Include="System\Video\1.png" />
+    <Content Include="System\Video\2.png" />
+    <Content Include="System\Video\3.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\interface.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\zh-Hans\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Redis\IRedis.csproj">
+      <Project>{03aeadc5-1134-4316-9cf8-bbde5af5f7a5}</Project>
+      <Name>IRedis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53266</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5050/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

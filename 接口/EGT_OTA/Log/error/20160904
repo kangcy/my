@@ -1,0 +1,18 @@
+[异常时间]：2016-09-04 07:41:52,883 [ThreadID:5] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3
+---------------------------
+[异常时间]：2016-09-04 08:23:38,633 [ThreadID:45] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3
+---------------------------
+[异常时间]：2016-09-04 10:10:59,622 [ThreadID:73] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3
+---------------------------

@@ -1,0 +1,7 @@
+﻿{
+  "RedisIps": [{ "Address": "localhost", "Port": "6379" }],
+  "Enabled": true,
+  "KeepAlive": 180,
+  "ClientName": "kangcy",
+  "Password": ""
+}

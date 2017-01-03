@@ -1,0 +1,42 @@
+[异常时间]：2016-09-12 09:14:59,139 [ThreadID:15] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3
+---------------------------
+[异常时间]：2016-09-12 09:18:18,444 [ThreadID:8] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3
+---------------------------
+[异常时间]：2016-09-12 09:19:31,232 [ThreadID:17] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3
+---------------------------
+[异常时间]：2016-09-12 09:20:01,930 [ThreadID:13] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3
+---------------------------
+[异常时间]：2016-09-12 09:21:59,726 [ThreadID:13] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3
+---------------------------
+[异常时间]：2016-09-12 10:12:00,267 [ThreadID:8] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3
+---------------------------
+[异常时间]：2016-09-12 10:13:35,878 [ThreadID:7] 
+[异常级别]：ERROR
+[日志类型]：ErrorLoger
+[异常信息]：
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3
+---------------------------
